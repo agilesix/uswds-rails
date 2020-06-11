@@ -1,5 +1,5 @@
 module Uswds
   module Rails
-    VERSION = '1.6.8'.freeze
+    VERSION = '2.7.0'.freeze
   end
 end
