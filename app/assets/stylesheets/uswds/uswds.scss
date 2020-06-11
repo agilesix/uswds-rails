@@ -1,49 +1,17 @@
-/*! uswds 1.6.4 */
+/*! uswds @version */
 
-// Relative font and image file paths
-$font-path:  'uswds';
-$image-path: 'uswds';
+// Required
+// -------------------------------------
+@import "packages/required";
 
-// Set $asset-pipeline to true if you're using the Rails Asset Pipeline
-$asset-pipeline: true;
+// Global
+// -------------------------------------
+@import "packages/global";
 
-// Vendor -------------- //
-@import 'uswds/core/variables-vendor';
-@import 'bourbon';
-@import 'neat';
-@import 'normalize-css';
+// Components
+// -------------------------------------
+@import "packages/uswds-components";
 
-// Core -------------- //
-@import 'uswds/core/variables';
-@import 'uswds/core/fonts';
-@import 'uswds/core/grid';
-@import 'uswds/core/utilities';
-@import 'uswds/core/base';
-
-// Elements -------------- //
-// Styles basic HTML elements
-@import 'uswds/elements/buttons';
-@import 'uswds/elements/embed';
-@import 'uswds/elements/figure';
-@import 'uswds/elements/inputs';
-@import 'uswds/elements/labels';
-@import 'uswds/elements/list';
-@import 'uswds/elements/table';
-@import 'uswds/elements/typography';
-
-// Components -------------- //
-@import 'uswds/components/accordions';
-@import 'uswds/components/alerts';
-@import 'uswds/components/banner';
-@import 'uswds/components/footer';
-@import 'uswds/components/forms';
-@import 'uswds/components/graphic-list';
-@import 'uswds/components/header';
-@import 'uswds/components/hero';
-@import 'uswds/components/layout';
-@import 'uswds/components/media-block';
-@import 'uswds/components/navigation';
-@import 'uswds/components/search';
-@import 'uswds/components/section';
-@import 'uswds/components/sidenav';
-@import 'uswds/components/skipnav';
+// Utilities
+// -------------------------------------
+@import "packages/uswds-utilities";
