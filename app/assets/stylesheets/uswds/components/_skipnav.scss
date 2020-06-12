@@ -1,6 +1,7 @@
 .usa-skipnav {
   @include border-box-sizing;
   @include typeset;
+  @include typeset-link;
   background: transparent;
   left: 0;
   padding: units(1) units(2);
@@ -10,7 +11,7 @@
   z-index: z-index(100);
 
   &:focus {
-    background: color('white');
+    background: color("white");
     left: 0;
     position: absolute;
     top: 0;
