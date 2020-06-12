@@ -12,9 +12,9 @@
     font-weight: $font-weight;
     font-display: fallback;
     src:
-      font-url('#{$file-path}.woff2') format('woff2'),
-      font-url('#{$file-path}.woff') format('woff'),
-      font-url('#{$file-path}.ttf') format('truetype');
+      font-url("#{$file-path}.woff2") format('woff2'),
+      font-url("#{$file-path}.woff") format('woff'),
+      font-url("#{$file-path}.ttf") format('truetype');
   }
 }
 
