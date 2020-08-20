@@ -4561,7 +4561,14 @@ var preventInvalidFiles = function preventInvalidFiles(e, fileInputEl, instructi
       var file = e.dataTransfer.files[i];
 
       if (allFilesAllowed) {
-        allFilesAllowed = file.name.indexOf(acceptedFiles);
+        var acceptedFilesArr = acceptedFiles.split(',');
+
+        for (var j = 0; i < acceptedFilesArr.length; j++) {
+          allFilesAllowed = file.name.indexOf(acceptedFilesArr[j]);
+          if (allFilesAllowed > 0) {
+            break;
+          }
+        }
 
         if (allFilesAllowed < 0) {
           break;
