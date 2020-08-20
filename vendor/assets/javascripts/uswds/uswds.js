@@ -4563,7 +4563,7 @@ var preventInvalidFiles = function preventInvalidFiles(e, fileInputEl, instructi
         var acceptedFilesArr = acceptedFiles.split(',');
 
         for (var j = 0; j < acceptedFilesArr.length; j++) {
-          allFilesAllowed = file.name.indexOf(acceptedFilesArr[j]);
+          allFilesAllowed = file.name.toLowerCase().indexOf(acceptedFilesArr[j].toLowerCase());
           if (allFilesAllowed > 0) {
             break;
           }
