@@ -2182,6 +2182,12 @@ var comboBox = behavior((_behavior = {}, _defineProperty(_behavior, CLICK, (_CLI
 });
 module.exports = comboBox;
 
+  $(document).arrive("." + COMBO_BOX_CLASS, function(newElem) {
+    if (!newElem.dataset.defaultValue) {
+      enhanceComboBox(newElem);
+    }
+  });
+
 },{"../config":32,"../events":33,"../utils/behavior":40,"../utils/select":44,"receptor/keymap":14}],21:[function(require,module,exports){
 "use strict";
 
