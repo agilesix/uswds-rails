@@ -4669,11 +4669,18 @@ var handleChange = function handleChange(e, fileInputEl, instructions, dropTarge
 };
 
 function constructFileInput(fileInputEl) {
-  var _buildFileInput = buildFileInput(fileInputEl),
-    instructions = _buildFileInput.instructions,
+  // prevent double creation of file input on arrive and turbolinks
+  var dropTarget = $(fileInputEl).find('.' + INSTRUCTIONS_CLASS)[0];
+  var instructions = $(fileInputEl).find('.' + TARGET_CLASS)[0];
+
+  if (!dropTarget && !instructions) {
+    var _buildFileInput = buildFileInput(fileInputEl);
+
+    instructions = _buildFileInput.instructions;
     dropTarget = _buildFileInput.dropTarget;
 
-  attachFileInputListeners(fileInputEl, dropTarget, instructions);
+    attachFileInputListeners(fileInputEl, dropTarget, instructions);
+  }
 }
 
 function attachFileInputListeners(fileInputEl, dropTarget, instructions) {
